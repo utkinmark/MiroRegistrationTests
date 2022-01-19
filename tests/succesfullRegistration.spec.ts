@@ -6,7 +6,7 @@ import { googleRegistrationOverlayPage } from '../PageObjects/googleRegistration
 import { googleAuthPage } from '../PageObjects/googleAuthPage'
 
 let chance = new Chance
-test.describe('blank fields validations tests', () => {
+test.describe('succesfull registrations tests', () => {
   test('succesfull registration without news subcribe', async ({ page }) => {
 
     let miroSignUpPage = new signUpPage(page)

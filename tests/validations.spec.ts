@@ -2,7 +2,8 @@ import { test} from '@playwright/test';
 import { signUpPage } from '../PageObjects/signUpPage'
 import { Chance } from 'chance'
 let chance = new Chance
-test.describe('blank fields validations tests', () => {
+
+test.describe('Blank fields validations tests', () => {
     //May be it`s overhead to check full blank form and every blank field after it, 
     //but sometimes GUI have problems with showing all errors in one time, or with showing specific error, so I made more tets to cover it
 
@@ -67,7 +68,7 @@ test.describe('blank fields validations tests', () => {
     });
 })
 
-test.describe('password validations tests', () => {
+test.describe('Password validations tests', () => {
     //passwords hardcoded bcs I dont know how your password evaluation works exactly
 
     test('click getStarted with short password', async ({ page }) => {
@@ -124,7 +125,7 @@ test.describe('password validations tests', () => {
 })
 
 
-test.describe('email validations tests', () => {
+test.describe('Email validations tests', () => {
     test('click getStarted with no @ symbol', async ({ page }) => {
         let miroSignUpPage = new signUpPage(page)
         await miroSignUpPage.goto()
